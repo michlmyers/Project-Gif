@@ -17,6 +17,15 @@ $(document).ready(function () {
             console.log(response);
             // create empty div for new gif / ratings to populate
             var topicDiv = $("<div class='topic'>");
+
+            for (var j = 0; j < response.data.length; j++) {
+                var imgURL = response.data[j].images.fixed_width_still.url;
+                var image = $('<img>').attr('src', imgURL);
+                var rating = response.data[j].rating;
+                var p = $('<p>').text('this gif is rated: ' + rating);
+                topicDiv.append(image, p);
+            }
+            /*
             // create image element and append to empty div
             var imgURL1 = [response.data[0].images.fixed_width_still.url];
             var imgURL2 = [response.data[1].images.fixed_width_still.url];
@@ -62,7 +71,7 @@ $(document).ready(function () {
             // topicDiv.append(p1, p2);
             topicDiv.append(image1, p1, image2, p2,image3, p3, image4, p4, image5, p5,
                  image6, p6, image7, p7,  image8, p8, image9, p9, image10, p10);
-
+                */
             // prepend results to page element
             $('#gifDump').prepend(topicDiv);
         });
