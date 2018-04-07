@@ -6,6 +6,12 @@ button {
     margin: 3px;
 }
 
+button:active {
+    background-color: pink;
+    color: black;
+    outline: 5px solid rgb(239, 255, 91);
+  }
+
 #topicButtons {
     margin-top: 10px;
     margin-left: 10px;
@@ -29,4 +35,5 @@ body {
 p {
     padding: 5px;
     margin: 5px;
+    color: pink;
 }

@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-    var topics = ['rottweiler', 'drums', 'records', 'fractals', 'album covers', 'coding', 'dessert', 'symmetry', 'video games', 'pizza'];
+    var topics = ['rottweiler', 'drums', 'records', 'fractals', 'album covers', 'coding', 'dessert', 'symmetry', 'video games', 'pizza', 'space', 'spooky', 'halloween'];
     // My api key =  T8BtFJivaeZt7qHxp2Qw17qsPXxyovkg
 
     function displayGiphy() {
@@ -67,7 +67,6 @@ $(document).ready(function () {
             $(this).attr('gifstate', 'still');
         }
     });
-
 
     renderButtons();
 
