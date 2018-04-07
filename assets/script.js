@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-    var topics = ['rottweiler', 'drums', 'album covers', 'coding', 'dessert', 'video games', 'pizza'];
+    var topics = ['rottweiler', 'drums', 'records', 'fractals', 'album covers', 'coding', 'dessert', 'video games', 'pizza'];
     // My api key =  T8BtFJivaeZt7qHxp2Qw17qsPXxyovkg
 
     console.log('my js file is being read');
@@ -18,10 +18,10 @@ $(document).ready(function () {
             // create empty div for new gif / ratings to populate
             var topicDiv = $("<div class='topic'>");
 
-            for (var j = 0; j < response.data.length; j++) {
-                var imgURL = response.data[j].images.fixed_width_still.url;
+            for (var i = 0; i < response.data.length; i++) {
+                var imgURL = response.data[i].images.fixed_width_still.url;
                 var image = $('<img>').attr('src', imgURL);
-                var rating = response.data[j].rating;
+                var rating = response.data[i].rating;
                 var p = $('<p>').text('this gif is rated: ' + rating);
                 topicDiv.append(image, p);
             }
